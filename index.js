@@ -6,18 +6,33 @@ person.email="arifulislam@gmail.com"
 class Person {
 
     constructor(name, email){
-        this.name = name
-        this.email = email
+        this._name = name
+        this._email = email
     }
 
-    changeName(name){
-        this.name = name
+    getName(){
+        return this._name
     }
-  
 
-    sendEmail(msg){
-        console.log('to log(...data: any[]')
-        console.log("Sending email", msg)
+    setName(name){
+        this._name = name
+    }
+
+    getEmail(){
+        return this._name
+    }
+
+    setEmail(email){
+        this._email = email
+    }
+
+    sendMail(msg){
+        console.log("To:", this._email);
+        console.log("Message ", this._sanitizeMsg(msg))
+    }
+
+    _sanitizeMsg(msg){
+        return msg.trim().toLowerCase();
     }
 
     print(){
@@ -31,6 +46,6 @@ const p2 = new Person("Abdullah Al Zarif", "zarif@gmail.com")
 const p3 = new Person("Assadullah Al Labib", "labib@gmail.com")
 
 // p1.print()
-p1.changeName('Ariful Islam Raju')
-p3.changeName('Labib')
+p3.setEmail('ariful@yahoo.com')
+p3.sendMail("Welcome    ")
 p3.print()
