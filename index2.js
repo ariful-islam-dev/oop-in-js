@@ -11,16 +11,31 @@ class Person {
 
         
     }
-    get name(){
-        console.log('This is a function call')
-        return this._name.toUpperCase()
+
+    getName(){
+        return this._name
     }
 
-    set name(value){
-        if(value.toLowerCase() === 'stack learner') return;
-        this._name = value
+    setName(name){
+        this._name = name
     }
-    
+
+    getEmail(){
+        return this._name
+    }
+
+    setEmail(email){
+        this._email = email
+    }
+
+    sendMail(msg){
+        console.log("To:", this._email);
+        console.log("Message ", this._sanitizeMsg(msg))
+    }
+
+    _sanitizeMsg(msg){
+        return msg.trim().toLowerCase();
+    }
 
     print(){
         console.log(this)
@@ -32,6 +47,7 @@ const p1 = new Person("Ariful Islam", "ariful@gmail")
 const p2 = new Person("Abdullah Al Zarif", "zarif@gmail.com")
 const p3 = new Person("Assadullah Al Labib", "labib@gmail.com")
 
-p1.name = 'Stack Learner'
-p1.print()
-
+// p1.print()
+p3.setEmail('ariful@yahoo.com')
+p3.sendMail("Welcome    ")
+p3.print()
