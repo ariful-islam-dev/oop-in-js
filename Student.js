@@ -1,23 +1,25 @@
+const _subjects = Symbol("subjects");
+const _fee = Symbol("_fee");
 const Person = require('./Person')
 
 class Student extends Person {
     constructor(name, email,subjects, fee){
         super(name, email);
-        this._subjects = subjects;
-        this._fee = fee
+        this[_subjects] = subjects;
+        this[_fee] = fee
     }
 
     get subjects(){
-        return this._subjects;
+        return this[_subjects];
     }
 
     get fee(){
-        return this._fee
+        return this[_fee]
     }
 
     print(){
         super.print();
-        console.log(`Subject ${this._subjects}, Fee ${this._fee}`)
+        console.log(`Subject ${this[_subjects]}, Fee ${this[_fee]}`)
     }
 }
 

@@ -1,27 +1,28 @@
+const _name = Symbol("name");
+const _email = Symbol("email");
 
 class Person {
 
 
     constructor(name, email){
-        this._name = name
-        this._email = email
+        this[_name] = name
+        this[_email] = email
 
         
     }
     get name(){
-        console.log('This is a function call')
-        return this._name.toUpperCase()
+        return this[_name].toUpperCase()
     }
 
     set name(value){
-        this._name = value
+        this[_name]= value
     }
     get email(){
-        return this._email.toLowerCase()
+        return this[_email].toLowerCase()
     }
 
     set email(value){
-        this._email = value
+        this[_email] = value
     }
 
     
@@ -31,7 +32,7 @@ class Person {
     }
 
     toString(){
-        return ` Name: ${this._name}, email: ${this._email}`
+        return ` Name: ${this[_name]}, email: ${this[_email]}`
     }
 
 

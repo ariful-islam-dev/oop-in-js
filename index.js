@@ -8,7 +8,5 @@ const s = new Student ("Azizul Islam", "azizul@gmail.com",["Computer 101", "Phys
 
 console.log(p)
 console.log(t)
-// console.log(s)
+console.log(s)
 
-s.print();
-t.print();
