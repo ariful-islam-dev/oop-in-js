@@ -12,4 +12,6 @@
     - [x] Teacher
     - [x] Stuff
     - [x] Contact
-    - [x] Address
+    - [x] Department
+    - [x] Subject
+    - [x] Exam
