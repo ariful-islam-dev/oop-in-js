@@ -9,3 +9,5 @@
     - [x] UniPerson
     - [x] Student
     - [x] Employee
+    - [x] Teacher
+    - [x] Stuff
