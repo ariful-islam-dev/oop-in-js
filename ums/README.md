@@ -11,3 +11,5 @@
     - [x] Employee
     - [x] Teacher
     - [x] Stuff
+    - [x] Contact
+    - [x] Address
